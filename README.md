@@ -35,7 +35,7 @@ permalink: /:year/:month/:day/:title/
 google_analytics: 
 
 name: Thomas Vaeth
-title: The Barber Theme
+title: 詹晓东
 description: >
   Barber is a blog theme for Jekyll built by Thomas Vaeth for Samesies using HTML, Sass, and JavaScript.
 url: http://barber.samesies.io
@@ -89,7 +89,7 @@ autopages:
   tags:
     layouts: 
       - 'tag.html'
-    title: 'The Barber Theme'
+    title: ' 詹晓东'
     permalink: '/tag/:tag'
     slugify:
       mode: raw
