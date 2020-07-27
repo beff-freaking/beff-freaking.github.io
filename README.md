@@ -1,231 +1,278 @@
-# Barber
-Barber is a minimal blog theme built for Jekyll. The blog theme features a masonry grid, endless scrolling, and page transitions. 💈 Barber is also available for [Ghost](https://github.com/samesies/barber-ghost).
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5f205b3a-73c2-472c-b052-82b95bdf36b7/deploy-status)](https://app.netlify.com/sites/sleepy-bhabha-00eedf/deploys)
 
-![Barber](https://raw.githubusercontent.com/samesies/barber-jekyll/master/barber.jpg "Barber")
+# Jekflix Template
 
-## Initial Setup
-* [Installation](#installation)
-* [Update Settings](#update-settings)
-* [Create Posts](#create-posts)
-* [Create Pages](#create-pages)
-* [Create Navigation](#create-navigation)
+![Jekflix Template Cover Image](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1505354182/jekflix-logo_mfngps.png)
 
-## Customization
-* [Contact Form](#contact-form)
-* [Social Media Links](#social-media-links)
-* [Disqus Comments](#disqus-comments)
+See the [demo here](https://jekflix.rossener.com/).
 
-## Additional Development
-* [Deployment](#deployment)
-* [Source Code](#source-code)
-* [Donations](#donations)
-* [Support](#support)
+## What is it?
 
-### Installation
-Jekyll requires all dependencies to be saved in the ````Gemfile````. Run ````bundle install```` (Install [Bundler](http://bundler.io/) if it is not already) on your command line after downloading or cloning the theme. You can then run ````bundle exec jekyll serve```` or ````npm start```` to see your development site. Run ````bundle exec jekyll build```` or ````npm run build```` to build a production ready site for deployment.
+A theme for Jekyll inspired by Netflix panel for who loves movies and series and would like to have a blog with this cool appearance.
 
-### Update Settings
-Almost everything to personalize your site is in the ````_config.yml````. 
+![Jekflix Screenshot Image](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566390829/jekflix-screenshot-2_zfiog2.jpg)
+
+## Features
+
+- [Live Search](https://github.com/thiagorossener/jekflix-template/wiki/Features#live-search)
+- [Estimated Reading Time](https://github.com/thiagorossener/jekflix-template/wiki/Features#estimated-reading-time)
+- [Reading Progress Bar](https://github.com/thiagorossener/jekflix-template/wiki/Features#reading-progress-bar) *(optional)*
+- ["New Post" tag](https://github.com/thiagorossener/jekflix-template/wiki/Features#new-post-tag)
+- [Load images on demand](https://github.com/thiagorossener/jekflix-template/wiki/Features#load-images-on-demand)
+- [Push Menu](https://github.com/thiagorossener/jekflix-template/wiki/Features#push-menu)
+- [SVG icons](https://github.com/thiagorossener/jekflix-template/wiki/Features#svg-icons)
+- [Shell script to create posts](https://github.com/thiagorossener/jekflix-template/wiki/Features#shell-script-to-create-posts)
+- [Tags page](https://github.com/thiagorossener/jekflix-template/wiki/Features#tags-page)
+- [About page](https://github.com/thiagorossener/jekflix-template/wiki/Features#about-page)
+- [Contact page](https://github.com/thiagorossener/jekflix-template/wiki/Features#contact-page)
+- [404 error page](https://github.com/thiagorossener/jekflix-template/wiki/Features#404-error-page)
+- [Feed RSS](https://github.com/thiagorossener/jekflix-template/wiki/Features#feed-rss)
+- [Disqus](https://github.com/thiagorossener/jekflix-template/wiki/Features#disqus) *(optional)*
+- [Featured post](https://github.com/thiagorossener/jekflix-template/wiki/Features#featured-post) *(optional)*
+- [Home page pagination](https://github.com/thiagorossener/jekflix-template/wiki/Features#home-page-pagination) *(optional)*
+- [Posts sidebar](https://github.com/thiagorossener/jekflix-template/wiki/Features#posts-sidebar) *(optional)*
+- [Paginated posts](https://github.com/thiagorossener/jekflix-template/wiki/Features#paginated-posts) *(optional)*
+- ["Before you go" modal](https://github.com/thiagorossener/jekflix-template/wiki/Features#before-you-go-modal) *(optional)*
+- [Post recommendation](https://github.com/thiagorossener/jekflix-template/wiki/Features#post-recommendation)
+- [Netlify CMS ready](https://github.com/thiagorossener/jekflix-template/wiki/Features#netlify-cms-ready)
+- [Translations](https://github.com/thiagorossener/jekflix-template/wiki/setup#translations) **new!**
+- [Math Expressions](https://github.com/thiagorossener/jekflix-template/wiki/Features#math-expressions) *(optional)* **new!**
+
+## SEO
+
+- Google Analytics
+- Meta tags
+- JSON-LD
+- Sitemap.xml
+- Social Media ready
+
+## Quick Install
+
+In the case you're installing to existing Jekyll project, add this line to your project's `Gemfile`:
 
 ```
-# Site/SEO settings
-email: okay@samesies.io
-baseurl: ""
-permalink: /:year/:month/:day/:title/
-google_analytics: 
+gem "jekflix"
+```
 
-name: Thomas Vaeth
-title: 詹晓东
-description: >
-  Barber is a blog theme for Jekyll built by Thomas Vaeth for Samesies using HTML, Sass, and JavaScript.
-url: http://barber.samesies.io
-twitter_username: thomasvaeth
-default_img: /assets/images/seo.jpg
-social:
-  - name: twitter
-    url: https://twitter.com/thomasvaeth
-  - name: instagram
-    url: https://www.instagram.com/thomas.vaeth/
-  - name: linkedin
-    url: https://www.linkedin.com/in/thomasvaeth/
-  - name: github
-    url: https://github.com/samesies
-  - name: codepen
-    url: https://codepen.io/thomasvaeth/
+Add this line to your project's `_config.yml`:
 
-# Contact settings
-contact_img: /assets/images/placeholder-28.jpg
-formcarry: https://formcarry.com/s/HkIo0nMb7
+```
+theme: jekflix
+```
 
-# Disqus settings
-disqus: test-apkdzgmqhj
+And then run:
 
-# MailChimp settings
-mailchimp_action: https://samesies.us17.list-manage.com/subscribe/post-json?u=66ddf555dab480e6a8606430b&amp;id=89b3ee034f
-mailchimp_input: b_66ddf555dab480e6a8606430b_89b3ee034f
+```
+$ bundle
+```
 
-# Author settings
-author:
-  - name: Thomas Vaeth
-    bio: Thomas Vaeth was born in New York, raised in Pennsylvania, and transplanted in Washington. He was a Web Developer at Urban Influence, but now he's a Software Engineer at Getty Images.
-    url: http://thomasvaeth.com
+Or install it yourself as:
 
-# Pagination settings
-pagination:
+```
+$ gem install jekflix
+```
+
+### Theme Colors
+
+Create the file `/assets/css/styles.scss` and add:
+
+```
+---
+---
+
+$themeColor: #ff0a16;
+$primaryDark: #141414;
+$accentDark: #ffffff;
+$lightGray: #f2f2f2;
+$texts: #333333;
+
+@import "jekflix";
+```
+
+Modify the variables above to change your theme colors.
+
+### Site configuration
+
+Below are some properties you can change in your project `_config.yml`, check the [documentation](https://github.com/thiagorossener/jekflix-template/wiki/settings) for more details.
+
+```
+# Site Settings
+name: Jekflix
+title: Jekflix | A blog theme for Jekyll
+description: Jekflix is a template for Jekyll inspired by Netflix and made by Thiago Rossener.
+tags:
+  - blog
+  - template
+  - jekyll
+  - theme
+  - netlify
+email: youremail@xyz.com
+disqus_username: disqus_username
+show_hero: true
+menu:
+  - title: Home
+    url: /
+  - title: About
+    url: /about
+  - title: Contact
+    url: /contact
+  - title: Feed
+    url: /feed.xml
+
+# Social Media Settings
+# Remove the item if you don't need it
+github_username: github_username
+facebook_username: facebook_username
+twitter_username: twitter_username
+instagram_username: instagram_username
+linkedin_username: linkedin_username
+medium_username: medium_username
+
+# Posts Settings
+show_time_bar: true
+show_modal_on_exit: false
+show_modal_on_finish_post: true
+two_columns_layout: true
+
+# Advanced Settings
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+google_analytics: "UA-XXXXXXXX-X"
+language: "en"
+categories_folder: category
+sent_message_url: "/contact/message-sent/"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+collections:
+  authors:
+    output: true
+paginate_path: "/page/:num/"
+show_get_theme_btn: true
+use_logo: false
+
+# Content paginator
+paginate_content:
   enabled: true
   debug: false
-  per_page: 12
-  permalink: '/page/:num/'
-  title: ':title'
-  limit: 0
-  sort_field: 'date'
-  sort_reverse: true
-autopages:
-  enabled: true
-  categories:
-    enabled: false
   collections:
-    enabled: false
-  tags:
-    layouts: 
-      - 'tag.html'
-    title: ' 詹晓东'
-    permalink: '/tag/:tag'
-    slugify:
-      mode: raw
-      cased: true
+    - posts
+  auto: false
+  separator: "--page-break--"
+  permalink: "/:num/"
+  seo_canonical: true
+  properties:
+    part:
+      is_generated: true
+    last:
+      is_generated: true
+    single:
+      is_generated: true
+
+# SASS
+sass:
+  style: compressed
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-paginate-content
 ```
 
-You can change the URL the [contact form](#contact-form) is sent to, add Google Analytics, change the SEO settings, grow your website with additional authors, and much more.
+## Setup
 
-### Create Posts
-All posts go upder the ````_posts```` directory. You can also have a ````_drafts```` directory with posts that will on your development page, but not in production.
+In the case you're cloning this repo, follow those instructions:
 
-```
----
-layout: post
-title: "Brunch Swag"
-date: 2017-02-18
-description: 
-image: /assets/images/placeholder-15.jpg
-author: Thomas Vaeth
-tags: 
-  - XOXO
-  - La Croix
----
-```
+- [Environment](https://github.com/thiagorossener/jekflix-template/wiki/setup#environment)
+- [Installing template](https://github.com/thiagorossener/jekflix-template/wiki/setup#installing-template)
+- [Running local](https://github.com/thiagorossener/jekflix-template/wiki/setup#running-local)
 
-The front matter has to have a layout of page. All the other fields are completely optional. If you have an ````author```` variable, then it must match an author's name in ````_config.yml```` (see [Update Settings](#update-settings)). The ````tag```` variable will add a related section to the post and popular tags to the footer.
+### Customization
 
-### Create Pages
-Creating a static page is the same as creating a post. The only difference is a page is in the root of the directory rather than the ````_posts```` directory.
+See the [settings documentation](https://github.com/thiagorossener/jekflix-template/wiki/settings) to customize layout, titles, social media and more.
 
-```
----
-layout: page
-title: Style Guide
-image: /assets/images/placeholder-18.jpg
----
-```
+### Theme
 
-You just have to make sure the front matter has a layout of page instead of post. If there is no title or image, then the page will default to the site configuration.
+You can easily change the theme colors by changing the file `src/yml/theme.yml`, then running `gulp build` in your terminal.
 
-### Create Navigation
-You can create a navigation in ````_includes/navigation.html````. Visitors can be linked directly to pages right on the top of your website.
+#### GitHub pages
 
-***
+It's a known issue that you can't run Gulp when deploying the website into GitHub pages. So, you must change the theme colors and run `gulp build` locally, then push the changes into your repo, there is no other way.
 
-### Contact Form
-The form uses [Formcarry](https://formcarry.com/) to send submitted messages straight to your inbox. The image on the popup is the the ````contact_img```` variable and the URL the forms sends to is the ````formcarry```` variable in ````_config.yml```` (see [Update Settings](#update-settings)).
+To see how your website is going to look like when you deploy it, run `bundle exec jekyll serve` locally and access `http://127.0.0.1:4000/`.
 
-![Contact Form](http://samesies.io/assets/images/barber/doc/framed-contact-form.jpg "Contact Form")
+## Posts
 
-This file can be found in ````_includes/formscarry.html````. You can change the labels of the form here. After everything is set you will need to submit a message to yourself to confirm everything is correct.
+Use the [Front Matter properties](https://github.com/thiagorossener/jekflix-template/wiki/post#front-matter-properties) to create posts.
 
-### Social Media Links
-[Font Awesome](http://fontawesome.io/) is used for the social media icons. The icons in the theme can be found in ````_includes/share.html```` and ````_includes/social.html````. The icons in ````_includes/share.html```` do not need to be edited unless you want to remove a certain website; however, the ones in ````_includes/social.html```` do have to be changed. You can follow the example that has been provided in ````_config.yml```` for you to link to all of your social media accounts  (see [Update Settings](#update-settings)). The naming convention has not changed from the instructions provided on Font Awesome.
+> **Note:** In the case you're cloning this repo, you can use the available [script](https://github.com/thiagorossener/jekflix-template/wiki/post#creating-a-post) to generate posts automatically.
 
-### Disqus Comments
-Comments can be enabled on every blog post in a few steps steps. The first step is to register your website with [Disqus](https://disqus.com/). Disqus will provide you with a shortname that you need for the next step. Once you have that the second step is to replace the ````disqus```` variable in ````_config.yml```` (see [Update Settings](#update-settings)). The third step is to open ````_includes/disqus.html```` and remove all the instructions. The final step is to visit a blog post and verify that your comments are there.
+## Release notes
 
-***
+### v3.1.0
 
-### Deployment
-GitHub Pages [does not support]((https://help.github.com/articles/adding-jekyll-plugins-to-a-github-pages-site/)) custom plugins. The tag list and tag pagination are built using custom plugins. There are several options to avoid any errors while deploying to production.
-* Run ````bundle exec jekyll build```` or ````npm run build```` and manually add the contents of the ```_site``` folder to the ```gh-pages``` branch.
-* Link the repository to [Netlify](https://www.netlify.com/). Netlify will then rebuild the theme every time a commit is pushed to the repo.
-* Finish setting up the [s3-website](https://github.com/klaemo/s3-website) package that is already included in the theme. This would deploy the theme to AWS S3 when ```npm run deploy``` is run.
+- Fixed hero URL, thanks to [@JoelSalzesson](https://github.com/JoelSalzesson)
+- Updated Google Analytics script, thanks to [@JHLeeeMe](https://github.com/JHLeeeMe)
+- Added MathJax library to render math expressions, thanks to [@XieGuochao](https://github.com/XieGuochao)
 
-### Source Code
-The source code is broken down to make finding what you need as easy as possible. Almost everything runs through ````gulpfile.js````, so you will need to run ````npm install```` on your command line before doing any additional development. You can then run ````gulp```` or ````npm run gulp```` to compile everything.
+### v3.0.2
 
-```
-.
-├── _assets
-|   ├── js
-|       ├── components
-|       ├── vendor
-|       ├── _inits.js
-|       └── app.js
-|   └── scss
-|       ├── base
-|       ├── components
-|       ├── fonts
-|       ├── regions
-|       ├── tools
-|       ├── utils
-|       ├── vendor
-|       └── app.scss
-├── _includes
-|   ├── contact.html
-|   ├── disqus.html
-|   ├── footer.html
-|   ├── formcarry.html
-|   ├── head.html
-|   ├── header.html
-|   ├── navigation.html
-|   ├── pagination.html
-|   ├── post-card.html
-|   ├── share.html
-|   ├── social.html
-|   └── subscribe_form.html
-├── _layouts
-|   ├── compress.html
-|   ├── default.html
-|   ├── page.html
-|   ├── post.html
-|   └── tag.html
-├── _plugins
-├── _posts
-├── _site
-├── assets
-|   ├── css
-|   ├── images
-|   ├── js
-├── .eslintrc
-├── .gitignore
-├── .stylelintrc
-├── 404.html
-├── _config.yml
-├── Gemfile
-├── Gemfile.lock
-├── gulpfile.js
-├── index.html
-├── package.json
-├── README.md
-├── style-guidle.html
-└── subscribe.html
-```
+- Added assets folder
 
-The CSS is written in Sass. The JavaScript is written in ES6, so your code is up to date with the newest standards.
+### v3.0.1
 
-### Donations
-Barber has been released for free. Similar themes cost around $29 on [ThemeForest](https://themeforest.net/category/static-site-generators/jekyll). Any donations would be greatly appreciated after the work that went into releasing Barber.
+- Fixed post SVG icons
 
-* PayPal – <https://www.paypal.me/samesies>
-* Bitcoin – 1PSzNmcfAFJY1PtBK5u9R5bTGfF7KAuLcq
-* Ethereum – 0x392F7116e4171F1D740397B6000EadD2e4bb9670
-* Litecoin – LSH9AnjcUTV5T7PUxXQuxPqb9W5aSR9GEP
+### v3.0.0
 
-### Support
-Email <okay@samesies.io> if you need any additional support with Barber.
+- Created theme `gem`
+- Enabled text translations
+- Added heading anchor links
+- Changed code highlight colors
+- Changed from Stylus to SASS
+
+### v2.0.1
+- Fixed bugs
+- Optimized to support disabled JS
+
+### v2.0.0
+- Added optional [sidebar](https://github.com/thiagorossener/jekflix-template/wiki/Features#posts-sidebar)
+- Added optional [Featured post](https://github.com/thiagorossener/jekflix-template/wiki/features#featured-post)
+- Added optional ["Before you go" modal](https://github.com/thiagorossener/jekflix-template/wiki/features#before-you-go-modal)
+- Added optional [post pagination](https://github.com/thiagorossener/jekflix-template/wiki/features#paginated-posts)
+- Added [post recommendation](https://github.com/thiagorossener/jekflix-template/wiki/features#post-recommendation)
+- Added meta keywords to improve SEO
+- Added JSON-LD to improve SEO
+- Changed pagination to be [optional](https://github.com/thiagorossener/jekflix-template/wiki/features#home-page-pagination)
+- Improved [Tags page](https://github.com/thiagorossener/jekflix-template/wiki/features#tags-page)
+- Cleaned up and improved [Front Matter properties](https://github.com/thiagorossener/jekflix-template/wiki/post#front-matter-properties)
+- Set up [Netlify CMS](https://github.com/thiagorossener/jekflix-template/wiki/features#netlify-cms-ready)
+- Improved customization settings
+- Minor design updates
+
+### v1.0.1
+- Fixed bugs
+- Upgraded to Gulp 4
+
+### v1.0.0
+- Initial release
+
+## Questions?
+
+File a [GitHub issue](https://github.com/thiagorossener/jekflix-template/issues/new) please.
+
+## Donation
+
+Did you like my work? Buy me a beer 😁🍺
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SAKL66RSDGH48&source=url)
+
+## Author
+
+[Thiago Rossener](https://rossener.com/)
+
+## License
+
+*Jekflix Template* is available under the MIT license. See the [LICENSE](https://github.com/thiagorossener/jekflix-template/blob/master/LICENSE) file for more info.
